@@ -8,6 +8,7 @@ export default function Home() {
         <div className="container mx-auto flex justify-center space-x-8">
           <Link href="#home" className="text-lg font-medium hover:text-blue-400 transition-colors">Home</Link>
           <Link href="#about" className="text-lg font-medium hover:text-blue-400 transition-colors">About</Link>
+          <Link href="#skills" className="text-lg font-medium hover:text-blue-400 transition-colors">Skills</Link>
           <Link href="#portfolio" className="text-lg font-medium hover:text-blue-400 transition-colors">Portfolio</Link>
           <Link href="#contact" className="text-lg font-medium hover:text-blue-400 transition-colors">Contact</Link>
         </div>
@@ -38,6 +39,54 @@ export default function Home() {
           <p className="text-xl text-gray-300 leading-relaxed font-open-sans">
             With expertise in modern web technologies like React, Next.js, and Tailwind CSS, I strive to build robust, scalable, and aesthetically pleasing applications. I believe in clean code, efficient workflows, and continuous learning to stay ahead in the ever-evolving tech landscape.
           </p>
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section id="skills" className="py-24 px-6 bg-gray-900">
+        <div className="container mx-auto max-w-6xl text-center">
+          <h2 className="text-5xl font-bold text-white mb-12 font-poppins">My Skills</h2>
+          <div className="flex flex-wrap justify-center gap-6">
+            {/* Frontend Skills */}
+            <div className="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex-1 min-w-[280px] max-w-[400px]">
+              <h3 className="text-3xl font-bold text-blue-400 mb-6 font-poppins">Frontend</h3>
+              <div className="flex flex-wrap justify-center gap-3">
+                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600">React.js</span>
+                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600">Next.js</span>
+                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600">Tailwind CSS</span>
+                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600">JavaScript (ES6+)</span>
+                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600">TypeScript</span>
+                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600">HTML5</span>
+                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600">CSS3</span>
+              </div>
+            </div>
+
+            {/* Backend Skills */}
+            <div className="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex-1 min-w-[280px] max-w-[400px]">
+              <h3 className="text-3xl font-bold text-blue-400 mb-6 font-poppins">Backend</h3>
+              <div className="flex flex-wrap justify-center gap-3">
+                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600">Node.js</span>
+                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600">Express.js</span>
+                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600">Python</span>
+                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600">Firebase</span>
+                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600">MongoDB</span>
+                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600">PostgreSQL</span>
+              </div>
+            </div>
+
+            {/* Tools & Others Skills */}
+            <div className="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex-1 min-w-[280px] max-w-[400px]">
+              <h3 className="text-3xl font-bold text-blue-400 mb-6 font-poppins">Tools & Others</h3>
+              <div className="flex flex-wrap justify-center gap-3">
+                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600">Git & GitHub</span>
+                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600">VS Code</span>
+                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600">Figma</span>
+                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600">Responsive Design</span>
+                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600">UI/UX Principles</span>
+                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600">Agile Methodologies</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
