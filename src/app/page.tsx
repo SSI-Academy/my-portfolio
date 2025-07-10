@@ -2,6 +2,8 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { FaLinkedinIn, FaGithub, FaTwitter, FaHome, FaUser, FaCode, FaBriefcase, FaEnvelope } from 'react-icons/fa';
+import { BsDot } from 'react-icons/bs';
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,22 +33,22 @@ export default function Home() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex justify-center space-x-8 w-full">
-            <Link href="#home" className="text-lg font-medium hover:text-blue-400 transition-colors">Home</Link>
-            <Link href="#about" className="text-lg font-medium hover:text-blue-400 transition-colors">About</Link>
-            <Link href="#skills" className="text-lg font-medium hover:text-blue-400 transition-colors">Skills</Link>
-            <Link href="#portfolio" className="text-lg font-medium hover:text-blue-400 transition-colors">Portfolio</Link>
-            <Link href="#contact" className="text-lg font-medium hover:text-blue-400 transition-colors">Contact</Link>
+            <Link href="#home" className="text-lg font-medium hover:text-blue-400 transition-colors flex items-center"><FaHome className="mr-2" />Home</Link>
+            <Link href="#about" className="text-lg font-medium hover:text-blue-400 transition-colors flex items-center"><FaUser className="mr-2" />About</Link>
+            <Link href="#skills" className="text-lg font-medium hover:text-blue-400 transition-colors flex items-center"><FaCode className="mr-2" />Skills</Link>
+            <Link href="#portfolio" className="text-lg font-medium hover:text-blue-400 transition-colors flex items-center"><FaBriefcase className="mr-2" />Portfolio</Link>
+            <Link href="#contact" className="text-lg font-medium hover:text-blue-400 transition-colors flex items-center"><FaEnvelope className="mr-2" />Contact</Link>
           </div>
         </div>
 
         {/* Mobile Menu (Conditional) */}
         {isMenuOpen && (
           <div className="md:hidden bg-gray-900 bg-opacity-95 backdrop-blur-sm py-4 mt-4 space-y-4 px-6">
-            <Link href="#home" onClick={closeMenu} className="block text-lg font-medium hover:text-blue-400 transition-colors">Home</Link>
-            <Link href="#about" onClick={closeMenu} className="block text-lg font-medium hover:text-blue-400 transition-colors">About</Link>
-            <Link href="#skills" onClick={closeMenu} className="block text-lg font-medium hover:text-blue-400 transition-colors">Skills</Link>
-            <Link href="#portfolio" onClick={closeMenu} className="block text-lg font-medium hover:text-blue-400 transition-colors">Portfolio</Link>
-            <Link href="#contact" onClick={closeMenu} className="block text-lg font-medium hover:text-blue-400 transition-colors">Contact</Link>
+            <Link href="#home" onClick={closeMenu} className="block text-lg font-medium hover:text-blue-400 transition-colors flex items-center"><FaHome className="mr-2" />Home</Link>
+            <Link href="#about" onClick={closeMenu} className="block text-lg font-medium hover:text-blue-400 transition-colors flex items-center"><FaUser className="mr-2" />About</Link>
+            <Link href="#skills" onClick={closeMenu} className="block text-lg font-medium hover:text-blue-400 transition-colors flex items-center"><FaCode className="mr-2" />Skills</Link>
+            <Link href="#portfolio" onClick={closeMenu} className="block text-lg font-medium hover:text-blue-400 transition-colors flex items-center"><FaBriefcase className="mr-2" />Portfolio</Link>
+            <Link href="#contact" onClick={closeMenu} className="block text-lg font-medium hover:text-blue-400 transition-colors flex items-center"><FaEnvelope className="mr-2" />Contact</Link>
           </div>
         )}
       </nav>
@@ -88,13 +90,13 @@ export default function Home() {
             <div className="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex-1 min-w-[280px] max-w-[400px]">
               <h3 className="text-3xl font-bold text-blue-400 mb-6 font-poppins">Frontend</h3>
               <div className="flex flex-wrap justify-center gap-3">
-                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600">React.js</span>
-                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600">Next.js</span>
-                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600">Tailwind CSS</span>
-                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600">JavaScript (ES6+)</span>
-                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600">TypeScript</span>
-                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600">HTML5</span>
-                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600">CSS3</span>
+                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600 flex items-center"><BsDot className="text-blue-400 mr-1" />React.js</span>
+                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600 flex items-center"><BsDot className="text-blue-400 mr-1" />Next.js</span>
+                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600 flex items-center"><BsDot className="text-blue-400 mr-1" />Tailwind CSS</span>
+                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600 flex items-center"><BsDot className="text-blue-400 mr-1" />JavaScript (ES6+)</span>
+                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600 flex items-center"><BsDot className="text-blue-400 mr-1" />TypeScript</span>
+                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600 flex items-center"><BsDot className="text-blue-400 mr-1" />HTML5</span>
+                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600 flex items-center"><BsDot className="text-blue-400 mr-1" />CSS3</span>
               </div>
             </div>
 
@@ -102,12 +104,12 @@ export default function Home() {
             <div className="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex-1 min-w-[280px] max-w-[400px]">
               <h3 className="text-3xl font-bold text-blue-400 mb-6 font-poppins">Backend</h3>
               <div className="flex flex-wrap justify-center gap-3">
-                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600">Node.js</span>
-                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600">Express.js</span>
-                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600">Python</span>
-                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600">Firebase</span>
-                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600">MongoDB</span>
-                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600">PostgreSQL</span>
+                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600 flex items-center"><BsDot className="text-blue-400 mr-1" />Node.js</span>
+                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600 flex items-center"><BsDot className="text-blue-400 mr-1" />Express.js</span>
+                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600 flex items-center"><BsDot className="text-blue-400 mr-1" />Python</span>
+                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600 flex items-center"><BsDot className="text-blue-400 mr-1" />Firebase</span>
+                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600 flex items-center"><BsDot className="text-blue-400 mr-1" />MongoDB</span>
+                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600 flex items-center"><BsDot className="text-blue-400 mr-1" />PostgreSQL</span>
               </div>
             </div>
 
@@ -115,12 +117,12 @@ export default function Home() {
             <div className="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex-1 min-w-[280px] max-w-[400px]">
               <h3 className="text-3xl font-bold text-blue-400 mb-6 font-poppins">Tools & Others</h3>
               <div className="flex flex-wrap justify-center gap-3">
-                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600">Git & GitHub</span>
-                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600">VS Code</span>
-                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600">Figma</span>
-                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600">Responsive Design</span>
-                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600">UI/UX Principles</span>
-                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600">Agile Methodologies</span>
+                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600 flex items-center"><BsDot className="text-blue-400 mr-1" />Git & GitHub</span>
+                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600 flex items-center"><BsDot className="text-blue-400 mr-1" />VS Code</span>
+                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600 flex items-center"><BsDot className="text-blue-400 mr-1" />Figma</span>
+                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600 flex items-center"><BsDot className="text-blue-400 mr-1" />Responsive Design</span>
+                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600 flex items-center"><BsDot className="text-blue-400 mr-1" />UI/UX Principles</span>
+                <span className="bg-gray-700 text-gray-200 px-4 py-2 rounded-full text-lg font-medium border border-gray-600 flex items-center"><BsDot className="text-blue-400 mr-1" />Agile Methodologies</span>
               </div>
             </div>
           </div>
@@ -155,7 +157,7 @@ export default function Home() {
               </div>
             </div>
             {/* Project Card 3 */}
-            <div className="bg-gray-800 rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
+            <div className="bg-gray-800 p-6 rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
               <img src="https://via.placeholder.com/400x250/334155/94a3b8?text=Project+3" alt="Project 3" className="w-full h-60 object-cover" />
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-white mb-2 font-poppins">Personal Portfolio Site</h3>
@@ -219,10 +221,10 @@ export default function Home() {
               </button>
             </div>
           </form>
-          <div className="mt-10 flex justify-center space-x-8">
-            <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors text-2xl font-poppins">LinkedIn</a>
-            <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors text-2xl font-poppins">GitHub</a>
-            <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors text-2xl font-poppins">Twitter</a>
+          <div className="mt-10 flex flex-wrap justify-center gap-4 md:flex-row">
+            <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors text-2xl font-poppins flex items-center"><FaLinkedinIn className="mr-2" />LinkedIn</a>
+            <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors text-2xl font-poppins flex items-center"><FaGithub className="mr-2" />GitHub</a>
+            <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors text-2xl font-poppins flex items-center"><FaTwitter className="mr-2" />Twitter</a>
           </div>
         </div>
       </section>
