@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { FaLinkedinIn, FaGithub, FaTwitter, FaHome, FaUser, FaCode, FaBriefcase, FaEnvelope } from 'react-icons/fa';
+import { FaLinkedinIn, FaGithub, FaTwitter, FaHome, FaUser, FaCode, FaBriefcase, FaEnvelope, FaFire, FaPaperPlane } from 'react-icons/fa';
 import { BsDot } from 'react-icons/bs';
 
 export default function Home() {
@@ -56,14 +56,15 @@ export default function Home() {
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center text-center px-6 pt-20">
         <div className="max-w-4xl mx-auto">
+          <img src="/images/profile.jpg" alt="Profile Picture" className="w-48 h-48 rounded-full mx-auto mb-8 object-cover shadow-lg" />
           <h1 className="text-6xl md:text-7xl font-extrabold leading-tight mb-4 text-white font-poppins">
             Hi, I'm <span className="text-blue-400">Nama Anda</span>
           </h1>
           <p className="text-3xl md:text-4xl font-light text-gray-300 mb-8 font-open-sans">
             A passionate <span className="font-medium text-blue-300">Web Developer</span> & <span className="font-medium text-blue-300">UI/UX Designer</span>
           </p>
-          <Link href="#portfolio" className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-full text-xl transition-colors duration-300 shadow-lg font-poppins">
-            View My Work
+          <Link href="#portfolio" className="inline-flex bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-full text-xl transition-colors duration-300 shadow-lg font-poppins items-center justify-center">
+            Hire Me <FaFire className="ml-2" />
           </Link>
         </div>
       </section>
@@ -215,9 +216,9 @@ export default function Home() {
             <div className="text-center">
               <button
                 type="submit"
-                className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full text-xl transition-colors duration-300 shadow-lg font-poppins focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+                className="inline-flex bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full text-xl transition-colors duration-300 shadow-lg font-poppins focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 items-center justify-center mx-auto"
               >
-                Send Message
+                Send Message <FaPaperPlane className="ml-2" />
               </button>
             </div>
           </form>
