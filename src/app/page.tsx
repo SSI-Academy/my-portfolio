@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { FaLinkedinIn, FaGithub, FaTwitter, FaHome, FaUser, FaCode, FaBriefcase, FaEnvelope, FaFire, FaPaperPlane } from 'react-icons/fa';
 import { BsDot } from 'react-icons/bs';
+import Image from 'next/image';
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -56,14 +57,18 @@ export default function Home() {
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center text-center px-6 pt-20">
         <div className="max-w-4xl mx-auto">
-          <img src="/images/profile.jpg" alt="Profile Picture" className="w-48 h-48 rounded-full mx-auto mb-8 object-cover shadow-lg" />
+          <Image
+            src="/images/profile.jpg" alt="Profile Picture"
+            className="w-48 h-48 rounded-full mx-auto mb-8 object-cover shadow-lg"
+            width={192}
+            height={192} />
           <h1 className="text-6xl md:text-7xl font-extrabold leading-tight mb-4 text-white font-poppins">
             Hi, I'm <span className="text-blue-400">Nama Anda</span>
           </h1>
           <p className="text-3xl md:text-4xl font-light text-gray-300 mb-8 font-open-sans">
             A passionate <span className="font-medium text-blue-300">Web Developer</span> & <span className="font-medium text-blue-300">UI/UX Designer</span>
           </p>
-          <Link href="#portfolio" className="inline-flex bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-full text-xl transition-colors duration-300 shadow-lg font-poppins items-center justify-center">
+          <Link href="#contact" className="inline-flex bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-full text-xl transition-colors duration-300 shadow-lg font-poppins items-center justify-center">
             Hire Me <FaFire className="ml-2" />
           </Link>
         </div>
@@ -137,7 +142,16 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {/* Project Card 1 */}
             <div className="bg-gray-800 rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
-              <img src="https://via.placeholder.com/400x250/334155/94a3b8?text=Project+1" alt="Project 1" className="w-full h-60 object-cover" />
+              <div className="relative w-full h-64">
+                <Image
+                  src="/images/projects/1.jpg"
+                  alt="Project 1"
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw,
+                    (max-width: 1200px) 50vw,
+                    33vw"
+                  fill />
+              </div>
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-white mb-2 font-poppins">E-commerce Platform</h3>
                 <p className="text-gray-300 mb-4 font-open-sans">
@@ -148,7 +162,16 @@ export default function Home() {
             </div>
             {/* Project Card 2 */}
             <div className="bg-gray-800 rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
-              <img src="https://via.placeholder.com/400x250/334155/94a3b8?text=Project+2" alt="Project 2" className="w-full h-60 object-cover" />
+              <div className="relative w-full h-64">
+                <Image
+                  src="/images/projects/2.jpg"
+                  alt="Project 1"
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw,
+                    (max-width: 1200px) 50vw,
+                    33vw"
+                  fill />
+              </div>
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-white mb-2 font-poppins">Task Management App</h3>
                 <p className="text-gray-300 mb-4 font-open-sans">
@@ -158,8 +181,17 @@ export default function Home() {
               </div>
             </div>
             {/* Project Card 3 */}
-            <div className="bg-gray-800 p-6 rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
-              <img src="https://via.placeholder.com/400x250/334155/94a3b8?text=Project+3" alt="Project 3" className="w-full h-60 object-cover" />
+            <div className="bg-gray-800 rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
+              <div className="relative w-full h-64">
+                <Image
+                  src="/images/projects/3.jpg"
+                  alt="Project 1"
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw,
+                    (max-width: 1200px) 50vw,
+                    33vw"
+                  fill />
+              </div>
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-white mb-2 font-poppins">Personal Portfolio Site</h3>
                 <p className="text-gray-300 mb-4 font-open-sans">
