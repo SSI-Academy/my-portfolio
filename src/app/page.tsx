@@ -1,102 +1,112 @@
-import Image from "next/image";
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="bg-gray-900 text-gray-100 font-open-sans min-h-screen">
+      {/* Navbar */}
+      <nav className="fixed top-0 left-0 right-0 bg-gray-900 bg-opacity-90 backdrop-blur-sm z-50 py-4 shadow-md">
+        <div className="container mx-auto flex justify-center space-x-8">
+          <Link href="#home" className="text-lg font-medium hover:text-blue-400 transition-colors">Home</Link>
+          <Link href="#about" className="text-lg font-medium hover:text-blue-400 transition-colors">About</Link>
+          <Link href="#portfolio" className="text-lg font-medium hover:text-blue-400 transition-colors">Portfolio</Link>
+          <Link href="#contact" className="text-lg font-medium hover:text-blue-400 transition-colors">Contact</Link>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </nav>
+
+      {/* Hero Section */}
+      <section id="home" className="min-h-screen flex items-center justify-center text-center px-6 pt-20">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-6xl md:text-7xl font-extrabold leading-tight mb-4 text-white font-poppins">
+            Hi, I'm <span className="text-blue-400">Nama Anda</span>
+          </h1>
+          <p className="text-3xl md:text-4xl font-light text-gray-300 mb-8 font-open-sans">
+            A passionate <span className="font-medium text-blue-300">Web Developer</span> & <span className="font-medium text-blue-300">UI/UX Designer</span>
+          </p>
+          <Link href="#portfolio" className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-full text-xl transition-colors duration-300 shadow-lg font-poppins">
+            View My Work
+          </Link>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-24 px-6 bg-gray-800">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-5xl font-bold text-white mb-12 font-poppins">About Me</h2>
+          <p className="text-xl text-gray-300 leading-relaxed mb-6 font-open-sans">
+            I'm a dedicated web developer with a keen eye for design and user experience. My journey in web development began with a fascination for how digital products can solve real-world problems and enhance daily life.
+          </p>
+          <p className="text-xl text-gray-300 leading-relaxed font-open-sans">
+            With expertise in modern web technologies like React, Next.js, and Tailwind CSS, I strive to build robust, scalable, and aesthetically pleasing applications. I believe in clean code, efficient workflows, and continuous learning to stay ahead in the ever-evolving tech landscape.
+          </p>
+        </div>
+      </section>
+
+      {/* Portfolio Section */}
+      <section id="portfolio" className="py-24 px-6 bg-gray-900">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-5xl font-bold text-white mb-12 text-center font-poppins">My Portfolio</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {/* Project Card 1 */}
+            <div className="bg-gray-800 rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
+              <img src="https://via.placeholder.com/400x250/334155/94a3b8?text=Project+1" alt="Project 1" className="w-full h-60 object-cover" />
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-white mb-2 font-poppins">E-commerce Platform</h3>
+                <p className="text-gray-300 mb-4 font-open-sans">
+                  A full-stack e-commerce solution with secure payment integration and a responsive design.
+                </p>
+                <a href="#" className="text-blue-400 hover:text-blue-300 font-semibold font-poppins">View Details &rarr;</a>
+              </div>
+            </div>
+            {/* Project Card 2 */}
+            <div className="bg-gray-800 rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
+              <img src="https://via.placeholder.com/400x250/334155/94a3b8?text=Project+2" alt="Project 2" className="w-full h-60 object-cover" />
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-white mb-2 font-poppins">Task Management App</h3>
+                <p className="text-gray-300 mb-4 font-open-sans">
+                  An intuitive task management application with real-time collaboration features.
+                </p>
+                <a href="#" className="text-blue-400 hover:text-blue-300 font-semibold font-poppins">View Details &rarr;</a>
+              </div>
+            </div>
+            {/* Project Card 3 */}
+            <div className="bg-gray-800 rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
+              <img src="https://via.placeholder.com/400x250/334155/94a3b8?text=Project+3" alt="Project 3" className="w-full h-60 object-cover" />
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-white mb-2 font-poppins">Personal Portfolio Site</h3>
+                <p className="text-gray-300 mb-4 font-open-sans">
+                  A responsive and modern personal portfolio website showcasing my design and development skills.
+                </p>
+                <a href="#" className="text-blue-400 hover:text-blue-300 font-semibold font-poppins">View Details &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-24 px-6 bg-gray-800">
+        <div className="container mx-auto max-w-3xl text-center">
+          <h2 className="text-5xl font-bold text-white mb-12 font-poppins">Get In Touch</h2>
+          <p className="text-xl text-gray-300 leading-relaxed mb-8 font-open-sans">
+            Have a project in mind or just want to say hello? Feel free to reach out!
+          </p>
+          <a href="mailto:your.email@example.com" className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-full text-xl transition-colors duration-300 shadow-lg font-poppins">
+            Email Me
+          </a>
+          <div className="mt-10 flex justify-center space-x-8">
+            <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors text-2xl font-poppins">LinkedIn</a>
+            <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors text-2xl font-poppins">GitHub</a>
+            <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors text-2xl font-poppins">Twitter</a>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-950 text-gray-500 py-8 text-center text-sm font-open-sans">
+        <div className="container mx-auto px-6">
+          <p>&copy; 2025 Nama Anda. All rights reserved.</p>
+          <p className="mt-2">Designed and Developed with &#x2764;&#xfe0f; and Next.js</p>
+        </div>
       </footer>
     </div>
   );
