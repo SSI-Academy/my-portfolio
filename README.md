@@ -29,7 +29,11 @@ To get a local copy up and running, follow these simple steps.
 
 1.  Clone the repo
     ```sh
-    git clone https://github.com/your_username_/my-portfolio.git
+    git clone https://github.com/SSI-Academy/my-portfolio.git
+```
+or
+```sh
+git clone git@github.com:SSI-Academy/my-portfolio.git
     ```
 2.  Install NPM packages
     ```sh
